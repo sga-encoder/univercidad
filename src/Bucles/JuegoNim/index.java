@@ -1,4 +1,4 @@
-package JuegoNim;
+package Bucles.JuegoNim;
 
 import java.util.Scanner;
 

@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Printer {
   public static final String RESET = "\u001B[0m";
+  public static final String BLACK = "\u001B[30m";
   public static final String ROJO = "\u001B[31m";
   public static final String VERDE = "\u001B[32m";
   public static final String AMARILLO = "\u001B[33m";
@@ -10,13 +11,13 @@ public class Printer {
   public static final String MAGENTA = "\u001B[35m";
   public static final String CIAN = "\u001B[36m";
   public static final String BLANCO = "\u001B[37m";
-  public static final String[] colors = { RESET, ROJO, VERDE, AMARILLO, AZUL, MAGENTA, CIAN, BLANCO };
+  public static final String[] colors = { RESET, BLACK, AZUL, VERDE, MAGENTA, ROJO, AMARILLO, CIAN, BLANCO };
   private static final Scanner input = new Scanner(System.in);
 
 
   public void template(String content, boolean isNewLine, Object... variables) {
     String modifiedContent = content;
-    String[] keyColors = { "@rt", "@c1", "@c2", "@c3", "@c4", "@c5", "@c6", "@c7" };
+    String[] keyColors = { "@rt", "@c0", "@c1", "@c2", "@c3", "@c4", "@c5", "@c6", "@c7" };
 
     // Reemplazar colores
     for (int i = 0; i < colors.length; i++) {
