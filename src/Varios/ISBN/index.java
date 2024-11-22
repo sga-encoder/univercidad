@@ -13,11 +13,13 @@ public class index {
     boolean is27 = false;
     boolean areAllDifferent = true;
     int count = 0;
+
     while (!isRealy && count < 9999) {
       String countString = String.valueOf(count);
+
       for (int i = 0; (i < 4) && areAllDifferent; i++) {
         for (int j = 0; (j < 4) && areAllDifferent; j++) {
-          if (countString.charAt(i) == countString.charAt(j)) {
+          if (countString.charAt(i) == countString.charAt(j) && i != j) {
             areAllDifferent = false;
             System.out.println("el falso");
           }
@@ -54,7 +56,9 @@ public class index {
       is27 = false;
       areAllDifferent = true;
       count++;
-      System.out.println(count + " isEven: " + isEven + " is3a1: " + is3a1 + " is27: " + is27 + " isReady: " +  isRealy);
+      System.out.println(count + " isEven: " + isEven + " is3a1: " + is3a1 + " is27: " + is27 + " isReady: " + isRealy);
     }
   }
 }
+
+
