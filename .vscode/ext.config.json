@@ -1,0 +1,42 @@
+{
+
+	"disabled": [
+    "christian-kohler.path-intellisense",
+    "solnurkarim.html-to-css-autocompletion",
+    "hwencc.html-tag-wrapper",
+    "vincaslt.highlight-matching-tag",
+    "heybourn.headwind",
+    "dbaeumer.vscode-eslint",
+    "GitHub.vscode-pull-request-github",
+    "dsznajder.es7-react-js-snippets",
+    "mikestead.dotenv",
+    "ms-azuretools.vscode-docker",
+    "pranaygp.vscode-css-peek",
+    "dzhavat.css-flexbox-cheatsheet",
+    "WallabyJs.console-ninja",
+    "naumovs.color-highlight",
+    "zitup.classnametocss",
+    "mrmlnc.vscode-autoprefixer",
+    "formulahendry.auto-rename-tag",
+    "steoates.autoimport",
+    "astro-build.astro-vscode",
+    "bmalehorn.vscode-fish",
+    "Zignd.html-css-class-completion",
+    "ritwickdey.LiveServer",
+    "ms-edgedevtools.vscode-edge-devtools",
+    "christian-kohler.npm-intellisense",
+    "ms-python.python",
+    "ms-python.debugpy",
+    "standard.vscode-standard",
+    "blanu.vscode-styled-jsx",
+    "bradlc.vscode-tailwindcss",
+    "bourhaouta.tailwindshades",
+    "rangav.vscode-thunder-client",
+    "davidbabel.vscode-simpler-icons"
+  ],
+
+	"autoReload": true,
+
+	"openInNewWindow": true
+
+}   
