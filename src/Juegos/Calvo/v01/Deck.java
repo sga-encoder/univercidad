@@ -1,28 +1,45 @@
 package Juegos.Calvo.v01;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
 
 public class Deck {
-  private int numberOfDecks;
-  private char[][] deck;
 
-  public Deck(int numberOfDecks) {
-    this.numberOfDecks = numberOfDecks;
-    this.deck = new char[][] {
-        { '0', 'A' }, { '0', '1' }, { '0', '2' }, { '0', '3' }, { '0', '4' }, { '0', '5' },
-        { '0', '6' }, { '0', '7' }, { '0', '8' }, { '0', '9' }, { '0', 'J' }, { '0', 'Q' },
-        { '0', 'K' }, { '1', 'A' }, { '1', '1' }, { '1', '2' }, { '1', '3' }, { '1', '4' },
-        { '1', '5' }, { '1', '6' }, { '1', '7' }, { '1', '8' }, { '1', '9' }, { '1', 'J' },
-        { '1', 'Q' }, { '1', 'K' }, { '2', 'A' }, { '2', '1' }, { '2', '2' }, { '2', '3' },
-        { '2', '4' }, { '2', '5' }, { '2', '6' }, { '2', '7' }, { '2', '8' }, { '2', '9' },
-        { '2', 'J' }, { '2', 'Q' }, { '2', 'K' }, { '2', 'A' }, { '2', '1' }, { '2', '2' },
-        { '2', '3' }, { '2', '4' }, { '2', '5' }, { '2', '6' }, { '2', '7' }, { '2', '8' },
-        { '2', '9' }, { '2', 'J' }, { '2', 'Q' }, { '2', 'K' },
-    };
-  }
+  public ArrayList<char[]> deckShuffler(int numberOfDecks) {
 
-  public char[][] deckShuffler() {
+        // Definir las cartas de un solo mazo
+        char[] cardSymbols = {'A', '2', '3', '4', '5', '6', '7', '8', '9', '1', 'J', 'Q', 'K'};
+        char[] cardType = { '0', '1', '2', '3' };
 
-  }
+        ArrayList<char[]> singleDeckList = new ArrayList<>();
+
+        // Agregar los elementos al ArrayList
+        
+        for (int i = 0; i < numberOfDecks; i++) {
+            for (int j = 0; j < cardType.length; j++) {
+                for (int k = 0; k < cardSymbols.length; k++) {
+                    singleDeckList.add(new char[] { cardType[j], cardSymbols[k] });
+                }
+            }
+        }
+
+        ArrayList<char[]> deck = new ArrayList<>();
+        int aux = singleDeckList.size();
+        for (int i = aux; i > 0; i--) {
+            int index = 0;
+            boolean isMayor = false;
+            do {
+                index = (int) (Math.random() * singleDeckList.size());
+                if (index >= 0) {
+                    isMayor = true;
+                }
+            } while (!isMayor);
+
+            deck.add(singleDeckList.get(index));
+            singleDeckList.remove(index);
+        }
+
+        return deck;
+
+    }
 }
