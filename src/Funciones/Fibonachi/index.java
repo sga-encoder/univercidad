@@ -5,7 +5,7 @@ public class index {
     System.out.println(fibonacci(5));
   }
 
-  public static int fibonacci(int n) {
+  public static int fibonacci(int n) {  
     if (n <= 0) {
       return 1;
     } else {
