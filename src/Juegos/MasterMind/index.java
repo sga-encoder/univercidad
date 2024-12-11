@@ -16,6 +16,7 @@ public class index {
       while (!control.equals("****")) {
 
         String input = print.template(true, 2, "", false, "");
+
         int inputLength = input.length();
         if (input.length() != 4) {
           for (int i = 0; i < 4 - inputLength; i++) {
@@ -56,6 +57,9 @@ public class index {
           if (answer.equalsIgnoreCase("N")) {
             continuePlay = false;
           }
+        }
+        if (input.equals("000r")) {
+          print.template("respuesta: @v0 Control: @v1", continuePlay, puzzle, control);
         }
         control = "0000";
       }
